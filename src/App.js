@@ -4,61 +4,45 @@ import './App.css';
 import {Link,Switch,Route} from 'react-router-dom';
 import FoodItems from './FoodItems';
 import about from './about';
+import community from './community';
+import location from './location';
+import recepies from './recepies';
+const divStyle = {
+  backgroundColor: '#ffdaca'
+};
 class App extends Component {
-  
+
   render() {
     return (
       <div className="ui-container">
         
         <div className="ui pointing menu">
        
-         <Link className="item" to="/about">About</Link>
-         <Link className="item" to="/">Community</Link>
-         <Link className="item" to="/">Location</Link>
-         <Link className="active orange item" to="food">Our Menu</Link>
-         <Link className="item" to="/">Recepies</Link>
+         <Link className="active orange item" to="/about">ABOUT</Link>
+         <Link className="item" to="/community">COMMUNITY</Link>
+         <Link className="item" to="/location">LOCATION</Link>
+         <Link className="item" to="/menu">OUR MENU</Link>
+         <Link className="item" to="/recepies">RECEPIES</Link>
          <div className="right menu">
+         <a className="ui item">
+      CONTACT
+    </a>
     <a className="ui item">
-      Logout
+      LOGOUT
     </a>
   </div>
         </div>
-        <div className="ui segment">
-        <Statistic.Group widths='four'>
-    <Statistic>
-      <Statistic.Value>22</Statistic.Value>
-      <Statistic.Label>Saves</Statistic.Label>
-    </Statistic>
-
-    <Statistic>
-      <Statistic.Value text>
-        Three
-        <br />Thousand
-      </Statistic.Value>
-      <Statistic.Label>Customers</Statistic.Label>
-    </Statistic>
-
-    <Statistic>
-      <Statistic.Value>
-        <Icon name='food' />
-        25
-      </Statistic.Value>
-      <Statistic.Label>Dishes</Statistic.Label>
-    </Statistic>
-
-    <Statistic>
-      <Statistic.Value>
-        <Image src='/images/avatar/small/joe.jpg' className='circular inline' />
-        42
-      </Statistic.Value>
-      <Statistic.Label>Team Members</Statistic.Label>
-    </Statistic>
-  </Statistic.Group>
-  <br/>
+        <div className="ui segment" style={divStyle} >
+     
+  
         <Switch>
         
-        <Route path="/food" component={FoodItems} />
+       
         <Route path="/about" component={about} />
+        <Route path="/community" component={community}/>
+        <Route path="/location" component={location}/>
+        <Route path="/menu" component={recepies} />
+        <Route path="/recepies" component={FoodItems}/>
       </Switch>
       </div>
       </div>

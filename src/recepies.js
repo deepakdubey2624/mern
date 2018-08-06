@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import bgPic from './assets/background.PNG';
-export default class about extends Component {
+import menu from './assets/menu.png';
+export default class recepies extends Component {
    
     render() {
       return (
@@ -9,7 +9,7 @@ export default class about extends Component {
   </div>
   <div className="six wide column">
   <div>
-        <img src={bgPic} alt="Smiley face"/>
+        <img src={menu} alt="Smiley face"/>
       </div>
   </div>
   <div className="five wide column">
